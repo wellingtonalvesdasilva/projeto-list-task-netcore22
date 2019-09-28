@@ -64,7 +64,7 @@ namespace WebApp.Controllers.Arquitetura
 
 
         /// <summary>
-        /// Obter o dado por Id
+        /// Remover logicamente um dado
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

@@ -54,6 +54,7 @@ namespace WebApp.Controllers.Api
         /// </summary>
         /// <param name="viewModel"></param>
         /// <returns></returns>
+        [HttpPost]
         public IActionResult Post([FromBody] TarefaViewModel viewModel)
         {
             if (viewModel == null)

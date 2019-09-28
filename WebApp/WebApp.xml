@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApp</name>
+    </assembly>
+    <members>
+        <member name="T:WebApp.Controllers.Api.TarefaController">
+            <summary>
+            API exclusivamente para trabalhar com tarefa
+            </summary>
+        </member>
+        <member name="M:WebApp.Controllers.Api.TarefaController.#ctor(Core.Architecture.IGenericRepository{ModelData.Model.Tarefa},AutoMapper.IMapper,Business.Interface.ITaskBusiness)">
+            <summary>
+            Construtor da tarefa controller que receber por injeção de dependência aquilo que precisa para funcionar
+            </summary>
+            <param name="repository"></param>
+            <param name="mapper"></param>
+            <param name="taskBusiness"></param>
+        </member>
+        <member name="M:WebApp.Controllers.Api.TarefaController.MarcarOuDesmarcar(System.Int64,System.Int32)">
+            <summary>
+            Marcar ou Desmarcar uma tarefa
+            </summary>
+            <param name="id"></param>
+            <param name="situacao">0 - desmarcar ou 1 - marcar</param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApp.Controllers.Api.TarefaController.Post(ModelData.Model.ViewModel.TarefaViewModel)">
+            <summary>
+            Criar uma tarefa
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApp.Controllers.Api.TarefaController.Put(ModelData.Model.ViewModel.TarefaViewModel)">
+            <summary>
+            Atualizar uma tarefa
+            </summary>
+            <param name="viewModel"></param>
+            <returns></returns>
+        </member>
+        <member name="T:WebApp.Controllers.Arquitetura.BaseApiController`2">
+            <summary>
+            Classe base para todas as APIs da aplicação
+            </summary>
+            <typeparam name="TModel"></typeparam>
+            <typeparam name="TViewModal"></typeparam>
+        </member>
+        <member name="F:WebApp.Controllers.Arquitetura.BaseApiController`2._repository">
+            <summary>
+            Repositório dinâmico de acordo com o modelo de dados
+            </summary>
+        </member>
+        <member name="M:WebApp.Controllers.Arquitetura.BaseApiController`2.#ctor(Core.Architecture.IGenericRepository{`0},AutoMapper.IMapper)">
+            <summary>
+            Construtor da BaseAPI que será utilizado por todas as APIs
+            </summary>
+            <param name="repository"></param>
+            <param name="mapper"></param>
+        </member>
+        <member name="M:WebApp.Controllers.Arquitetura.BaseApiController`2.Get">
+            <summary>
+            Obter todos os dados
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApp.Controllers.Arquitetura.BaseApiController`2.Get(System.Int64)">
+            <summary>
+            Obter o dado por Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApp.Controllers.Arquitetura.BaseApiController`2.Delete(System.Int64)">
+            <summary>
+            Obter o dado por Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApp.Controllers.Arquitetura.BaseApiController`2.PrepararRetorno(`0)">
+            <summary>
+            Realiza o mapeamento do modelo para ViewModel
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApp.Controllers.Arquitetura.BaseApiController`2.PrepararRetorno(System.Linq.IQueryable{`0})">
+            <summary>
+            Realiza o mapeamento de IQueryable do modelo para lista de ViewModel
+            </summary>
+            <param name="models"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
