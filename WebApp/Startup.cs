@@ -67,7 +67,7 @@ namespace WebApp
                     {
                         Name = "Wellington Alves da Silva",
                         Email = "wellington.alvesdasilva@hotmail.com",
-                        Url = "https://github.com/wellingtonalvesdasilva"
+                        Url = "https://github.com/wellingtonalvesdasilva/projeto-list-task-netcore22"
                     }
                 });
 

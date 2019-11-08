@@ -73,7 +73,7 @@
         </member>
         <member name="M:WebApp.Controllers.Arquitetura.BaseApiController`2.Delete(System.Int64)">
             <summary>
-            Obter o dado por Id
+            Remover logicamente um dado
             </summary>
             <param name="id"></param>
             <returns></returns>
