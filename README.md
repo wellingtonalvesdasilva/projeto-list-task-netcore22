@@ -19,3 +19,8 @@ Projeto desenvolvido em Asp .Net Core 2.2 para lista de tarefas
 * **[Jquery](https://jquery.com/)** 
 * **[Bootstrap](https://getbootstrap.com/)** 
 * **[Font Awesome](https://fontawesome.com/)** 
+
+## Tela
+ Tela de inclusão, exclusão, e edição das tarefas.
+ Para marcar ou desmarcar uma tarefa como finalizada, somente clicar na linha da tarefa, caso queira ver a documentação da API só clicar no link do topo, você será redirecionado para a documentação que foi utilizado o [Swagger](https://swagger.io/)
+![alt text](https://raw.githubusercontent.com/wellingtonalvesdasilva/projeto-list-task-netcore22/master/WebApp/wwwroot/img/tela.PNG)
