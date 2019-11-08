@@ -38,7 +38,10 @@ namespace WebApp
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<TaskContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            //Banco em Memória para poder publicar no Azure
+            services.AddDbContext<TaskContext>(options => options.UseInMemoryDatabase(databaseName: "TaskListDatabase"));
+
+            //services.AddDbContext<TaskContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             //Configura a injeção de dependência
             services.AddScoped<IGenericRepository<Tarefa>, TaskRepository>();
@@ -70,12 +73,6 @@ namespace WebApp
                         Url = "https://github.com/wellingtonalvesdasilva/projeto-list-task-netcore22"
                     }
                 });
-
-                //Obtendo o diretório e depois o nome do arquivo .xml de comentários
-                var applicationBasePath = PlatformServices.Default.Application.ApplicationBasePath;
-                var applicationName = PlatformServices.Default.Application.ApplicationName;
-                var xmlDocumentPath = Path.Combine(applicationBasePath, $"{applicationName}.xml");
-                c.IncludeXmlComments(xmlDocumentPath);
             });
         }
 

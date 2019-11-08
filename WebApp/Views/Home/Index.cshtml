@@ -132,7 +132,7 @@
 @section scripts {
     <script src="https://mustache.github.io/extras/mustache.js"></script>
     <script>
-        jQuery.each(["put", "postJson"], function (i, method) {
+        jQuery.each(["put", "post"], function (i, method) {
             jQuery[method] = function (url, data, callback) {
                 if (jQuery.isFunction(data)) {
                     type = type || callback;
@@ -212,7 +212,7 @@
                 return;
             }
 
-            $.postJson(urlApiTarefa, dados, function () { Listar(); });
+            $.post(urlApiTarefa, dados, function () { Listar(); });
         }
 
         function ToggleMarcar() {

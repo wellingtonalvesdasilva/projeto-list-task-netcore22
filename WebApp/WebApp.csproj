@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>WebApp.xml</DocumentationFile>
+    <DocumentationFile>bin\WebApp.xml</DocumentationFile>
     <OutputPath></OutputPath>
   </PropertyGroup>
 
